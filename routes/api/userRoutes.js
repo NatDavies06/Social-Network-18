@@ -5,7 +5,7 @@ const { getAllUsers,
     updateUser,
     deleteUser,
     addFriend,
-    removeFriend } = require('../controllers/user-controller');
+    removeFriend } = require('../../controllers/user-controller');
 
 // Routes for 'user' related functions
 router.route('/')
