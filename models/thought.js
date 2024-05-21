@@ -40,7 +40,7 @@ const thoughtSchema = new Schema({
     type: String,
     required: true
   },
-  reactions: [reactionSchema] // Embed the reaction subdocument schema
+  reactions: [reactionSchema]
 }, {
   toJSON: {
     virtuals: true,

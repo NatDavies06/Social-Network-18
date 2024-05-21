@@ -29,7 +29,7 @@ const userSchema = new Schema({
     id: false
 });
 
-// Create a 'friendCount' getting length of the user's friends
+// a friendcount function
 userSchema.virtual('friendCount').get(function () {
     return this.friends.length;
 });
