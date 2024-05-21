@@ -6,9 +6,10 @@ const {
     updateThought,
     deleteThought,
     addReaction,
-    removeReaction } = require('../../controllers/thoughtControllers');
+    removeReaction
+} = require('../../controllers/thoughtController'); // Fixed the file path here
 
-    // Routes for 'thought' related  functions
+// Routes for 'thought' related functions
 router.route('/')
     .get(getAllThoughts)
     .post(createThought);
