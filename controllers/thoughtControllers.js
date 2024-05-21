@@ -11,7 +11,7 @@ const thoughtController = {
       });
   },
 
-  getThoughtById(req, res) { // Added the missing getThoughtById method
+  getThoughtById(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
       .select('-__v')
       .then(dbThoughtData => {
