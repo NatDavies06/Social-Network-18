@@ -12,7 +12,7 @@ const { getAllUsers,
 // Routes for 'user' related functions
 router.route('/')
     .get(getAllUsers)
-    . post(createUser);
+    .post(createUser);
 
 router.route('/:userId')
     .get(getUserById)
