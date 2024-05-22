@@ -1,4 +1,5 @@
-const { Thought, User } = require('../models');
+const User = require('../models/user');
+const Thought = require('../models/thought');
 
 const thoughtController = {
   async getAllThoughts(req, res) {
@@ -6,7 +7,6 @@ const thoughtController = {
       const thoughts = await Thought.find({}).select('-__v');
       res.json(thoughts);
     } catch (err) {
-      console.error(err);
       res.status(500).json(err);
     }
   },
@@ -19,7 +19,6 @@ const thoughtController = {
       }
       res.json(thought);
     } catch (err) {
-      console.error(err);
       res.status(500).json(err);
     }
   },
