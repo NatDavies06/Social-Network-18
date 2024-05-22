@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { Schema, model } = require('mongoose');
+const reactionSchema = require('./reaction.js');
 
 // Define the reaction schema
 const reactionSchema = new Schema({
@@ -49,7 +49,7 @@ const thoughtSchema = new Schema({
   id: false
 });
 
-thoughtSchema.virtual('reactionCount').get(function() {
+thoughtSchema.virtual('reactionCount').get(function () {
   return this.reactions.length;
 });
 
